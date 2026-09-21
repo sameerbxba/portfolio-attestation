@@ -10,7 +10,7 @@ The interesting part is not that it sends the emails. It is what it refuses to
 count.
 
 ```
-git clone <this repo> && cd portfolio-attestation
+git clone https://github.com/sameerbxba/portfolio-attestation.git && cd portfolio-attestation
 pip install -r requirements.txt
 python -m attest.cli run
 ```
