@@ -1,0 +1,84 @@
+{
+  "description": "One quarterly cycle at Meridian, recorded. Ten requests go out and nine inbound messages come back: four decisions, and five that are not (an ambiguous reply, a prose reply, an out of office, a colleague answering for an owner on leave, and a bounce from the mail system). One record is amended two days after its owner confirmed it, and one request is never answered at all. `{digest}` is substituted with the record version actually sent to that owner.",
+  "events": [
+    {
+      "type": "reply",
+      "day": 1,
+      "app_id": "APP-001",
+      "sender": "ravi.menon@meridianfin.example",
+      "subject": "RE: Application confirmation due: Ledger Consolidation Platform",
+      "body": "CONFIRM\n\nStill accurate, no changes this quarter.\n\nREF: APP-001:{digest}\n"
+    },
+    {
+      "type": "reply",
+      "day": 1,
+      "app_id": "APP-014",
+      "sender": "ravi.menon@meridianfin.example",
+      "subject": "RE: Application confirmation due: Fraud Screening Service",
+      "body": "CONFIRM\n\nREF: APP-014:{digest}\n"
+    },
+    {
+      "type": "reply",
+      "day": 2,
+      "app_id": "APP-002",
+      "sender": "priya.sundaram@meridianfin.example",
+      "subject": "RE: Application confirmation due: Client Onboarding Portal",
+      "body": "CONFIRM\n\nAll correct as shown.\n\nREF: APP-002:{digest}\n"
+    },
+    {
+      "type": "amend",
+      "day": 4,
+      "app_id": "APP-002",
+      "changes": {"criticality": "tier_2"},
+      "note": "Architecture review downgrades the portal two days after its owner confirmed it at tier 1. Nobody tells the owner. The attestation on file now describes a record that no longer exists."
+    },
+    {
+      "type": "reply",
+      "day": 2,
+      "app_id": "APP-003",
+      "sender": "tomas.berg@meridianfin.example",
+      "subject": "RE: Application confirmation due: Treasury Reporting Suite",
+      "body": "UPDATE\n\nVendor is now Northwind Systems EMEA, contract moved in July.\n\nREF: APP-003:{digest}\n"
+    },
+    {
+      "type": "reply",
+      "day": 3,
+      "app_id": "APP-007",
+      "sender": "ravi.menon@meridianfin.example",
+      "subject": "RE: Application confirmation due: Vendor Risk Register",
+      "body": "Yes, this all still looks right to me. Thanks Ravi\n\nREF: APP-007:{digest}\n"
+    },
+    {
+      "type": "reply",
+      "day": 3,
+      "app_id": "APP-006",
+      "sender": "priya.sundaram@meridianfin.example",
+      "subject": "RE: Application confirmation due: Marketing Automation",
+      "body": "CONFIRM\n\nActually hold on, we are winding this down in November so maybe\n\nRETIRE\n\nREF: APP-006:{digest}\n"
+    },
+    {
+      "type": "reply",
+      "day": 1,
+      "app_id": "APP-009",
+      "sender": "tomas.berg@meridianfin.example",
+      "subject": "Automatic reply: Application confirmation due: Data Warehouse",
+      "body": "I am out of the office until 14 October with limited access to email.\n\nREF: APP-009:{digest}\n"
+    },
+    {
+      "type": "reply",
+      "day": 2,
+      "app_id": "APP-010",
+      "sender": "sam.okafor@meridianfin.example",
+      "subject": "RE: Application confirmation due: Intranet",
+      "body": "CONFIRM\n\nPriya is on leave, picking this up for her. Nothing has changed.\n\nREF: APP-010:{digest}\n"
+    },
+    {
+      "type": "reply",
+      "day": 1,
+      "app_id": "APP-011",
+      "sender": "postmaster@meridianfin.example",
+      "subject": "Undeliverable: Application confirmation due: Legacy Claims Archive",
+      "body": "Your message could not be delivered. The mailbox is full.\n\nREF: APP-011:{digest}\n"
+    }
+  ]
+}

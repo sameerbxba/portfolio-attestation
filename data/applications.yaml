@@ -1,0 +1,151 @@
+# The application register for a fictional organisation, Meridian Financial
+# Group. Fourteen applications, one of them out of scope.
+#
+# The register is deliberately imperfect in the ways real ones are. Three
+# entries cannot be attested at all and the reasons differ: one owner has left,
+# one owner was never in the directory, one owner cell is empty. A register
+# that only contained clean rows would demonstrate nothing, because the
+# interesting behaviour of this system is what it does with the rows that
+# cannot produce an answer.
+
+organisation: Meridian Financial Group
+standard: Application Portfolio Governance Standard
+cycle_frequency: quarterly
+
+owners:
+  - email: dana.whitfield@meridianfin.example
+    name: Dana Whitfield
+    manager_email: null
+    active: true
+
+  - email: ravi.menon@meridianfin.example
+    name: Ravi Menon
+    manager_email: dana.whitfield@meridianfin.example
+    active: true
+
+  - email: priya.sundaram@meridianfin.example
+    name: Priya Sundaram
+    manager_email: dana.whitfield@meridianfin.example
+    active: true
+
+  - email: tomas.berg@meridianfin.example
+    name: Tomas Berg
+    manager_email: dana.whitfield@meridianfin.example
+    active: true
+
+  # Left the organisation between cycles. Still named on APP-004.
+  - email: lena.ostrowski@meridianfin.example
+    name: Lena Ostrowski
+    manager_email: dana.whitfield@meridianfin.example
+    active: false
+
+  # In the directory, owns nothing. Replies on a colleague's behalf in the
+  # recorded session, which AT-7 refuses.
+  - email: sam.okafor@meridianfin.example
+    name: Sam Okafor
+    manager_email: dana.whitfield@meridianfin.example
+    active: true
+
+applications:
+  - id: APP-001
+    name: Ledger Consolidation Platform
+    owner_email: ravi.menon@meridianfin.example
+    criticality: tier_1
+    vendor: Northwind Systems
+    data_classification: confidential
+
+  - id: APP-002
+    name: Client Onboarding Portal
+    owner_email: priya.sundaram@meridianfin.example
+    criticality: tier_1
+    vendor: Orlo Digital
+    data_classification: restricted
+
+  - id: APP-003
+    name: Treasury Reporting Suite
+    owner_email: tomas.berg@meridianfin.example
+    criticality: tier_2
+    vendor: Northwind Systems
+    data_classification: confidential
+
+  # Owner has left. AT-1.
+  - id: APP-004
+    name: Payroll Interface
+    owner_email: lena.ostrowski@meridianfin.example
+    criticality: tier_2
+    vendor: Kestrel HR
+    data_classification: restricted
+
+  # No owner recorded at all. AT-1.
+  - id: APP-005
+    name: Contract Repository
+    owner_email: null
+    criticality: tier_2
+    vendor: Vellum
+    data_classification: confidential
+
+  - id: APP-006
+    name: Marketing Automation
+    owner_email: priya.sundaram@meridianfin.example
+    criticality: tier_3
+    vendor: Orlo Digital
+    data_classification: internal
+
+  - id: APP-007
+    name: Vendor Risk Register
+    owner_email: ravi.menon@meridianfin.example
+    criticality: tier_1
+    vendor: in-house
+    data_classification: confidential
+
+  # Owner is not in the directory. AT-1.
+  - id: APP-008
+    name: Expense Capture
+    owner_email: j.kaur@meridianfin.example
+    criticality: tier_3
+    vendor: Ledgerly
+    data_classification: internal
+
+  - id: APP-009
+    name: Data Warehouse
+    owner_email: tomas.berg@meridianfin.example
+    criticality: tier_1
+    vendor: Northwind Systems
+    data_classification: confidential
+
+  - id: APP-010
+    name: Intranet
+    owner_email: priya.sundaram@meridianfin.example
+    criticality: tier_3
+    vendor: in-house
+    data_classification: internal
+
+  - id: APP-011
+    name: Legacy Claims Archive
+    owner_email: ravi.menon@meridianfin.example
+    criticality: tier_3
+    vendor: Vellum
+    data_classification: confidential
+
+  # Out of scope. Never requested, never counted, in either direction.
+  - id: APP-012
+    name: Sandbox Analytics
+    owner_email: tomas.berg@meridianfin.example
+    criticality: tier_3
+    vendor: Orlo Digital
+    data_classification: internal
+    in_scope: false
+
+  - id: APP-013
+    name: Records Retention Tool
+    owner_email: priya.sundaram@meridianfin.example
+    criticality: tier_2
+    vendor: Vellum
+    data_classification: confidential
+
+  - id: APP-014
+    name: Fraud Screening Service
+    owner_email: ravi.menon@meridianfin.example
+    criticality: tier_1
+    vendor: Northwind Systems
+    data_classification: confidential

@@ -1,0 +1,52 @@
+
+  cycle 2026-Q4  opened 2026-10-01
+  13 applications in scope, 10 requests sent
+
+  could not be asked
+    APP-004  owner_inactive   AT-1: APP-004 is owned by lena.ostrowski@meridianfin.example, who is not active.
+    APP-005  no_owner         AT-1: APP-005 has no owner recorded.
+    APP-008  no_owner         AT-1: APP-008 names owner 'j.kaur@meridianfin.example', who is not in the owner directory.
+
+  replies
+    day  1  APP-001  attested: APP-001 confirm
+    day  1  APP-014  attested: APP-014 confirm
+    day  1  APP-009  not a decision (auto_reply), still open
+    day  1  APP-011  undeliverable: APP-011 closed, the request never arrived
+    day  2  APP-002  attested: APP-002 confirm
+    day  2  APP-003  attested: APP-003 update
+    day  2  APP-010  not a decision (wrong_owner), still open
+    day  3  APP-007  not a decision (unparseable), clarification sent, still open
+    day  3  APP-006  not a decision (ambiguous), clarification sent, still open
+    day  4  APP-002  register amended, attestation on file no longer matches
+
+  day 11  escalated to line management: APP-006, APP-007, APP-009, APP-010, APP-013
+  day 21  recorded as not attested: APP-006, APP-007, APP-009, APP-010, APP-013
+
+  ────────────────────────────────────────────────
+  response rate    90.0%   (9 replies to 10 requests)
+  COVERAGE         23.1%   (3 valid attestations across 13 in scope)
+  ────────────────────────────────────────────────
+    stale              1
+    revoked            0
+    exceptions         9
+    unresolved         0
+
+  by criticality
+    tier_1   2/4   50.0%
+    tier_2   1/5   20.0%
+    tier_3   0/4    0.0%
+
+  attested, then the record changed
+    APP-002  Client Onboarding Portal       agreed 389d353c07a9 -> now f80e2fde15c7
+
+  exceptions
+    APP-004  Payroll Interface              owner_inactive
+    APP-005  Contract Repository            no_owner
+    APP-006  Marketing Automation           no_response  (ambiguous)
+    APP-007  Vendor Risk Register           no_response  (unparseable)
+    APP-008  Expense Capture                no_owner
+    APP-009  Data Warehouse                 no_response  (auto_reply)
+    APP-010  Intranet                       no_response  (wrong_owner)
+    APP-011  Legacy Claims Archive          bounced  (bounced)
+    APP-013  Records Retention Tool         no_response
+
